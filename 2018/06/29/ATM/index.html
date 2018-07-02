@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Jorrell Bolg</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#ATM是先扣余额再吐钞！ 用户肯定会担心，万一吐钞过程中发生了机器故障，钞票没有吐出，但账户余额却被扣除的状况发生。 ATM发生故障时，会发送失败消息给后台数据库进程，数据库进程回滚该交易ID，用户余额恢复(rollback)到取款前的数目。 ATM如果成功吐钞，会发送确认消息告诉后台数据库进程，至此整个交易ID完成。 但故障有很多，包括ATM机械故障、ATM余额不足、ATM掉电重启、网络故障等">
+  <meta name="description" content="ATM是先扣余额再吐钞！用户肯定会担心，万一吐钞过程中发生了机器故障，钞票没有吐出，但账户余额却被扣除的状况发生。 ATM发生故障时，会发送失败消息给后台数据库进程，数据库进程回滚该交易ID，用户余额恢复(rollback)到取款前的数目。 ATM如果成功吐钞，会发送确认消息告诉后台数据库进程，至此整个交易ID完成。 但故障有很多，包括ATM机械故障、ATM余额不足、ATM掉电重启、网络故障等等。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jorrell Bolg">
 <meta property="og:url" content="http://yoursite.com/2018/06/29/ATM/index.html">
 <meta property="og:site_name" content="Jorrell Bolg">
-<meta property="og:description" content="#ATM是先扣余额再吐钞！ 用户肯定会担心，万一吐钞过程中发生了机器故障，钞票没有吐出，但账户余额却被扣除的状况发生。 ATM发生故障时，会发送失败消息给后台数据库进程，数据库进程回滚该交易ID，用户余额恢复(rollback)到取款前的数目。 ATM如果成功吐钞，会发送确认消息告诉后台数据库进程，至此整个交易ID完成。 但故障有很多，包括ATM机械故障、ATM余额不足、ATM掉电重启、网络故障等">
+<meta property="og:description" content="ATM是先扣余额再吐钞！用户肯定会担心，万一吐钞过程中发生了机器故障，钞票没有吐出，但账户余额却被扣除的状况发生。 ATM发生故障时，会发送失败消息给后台数据库进程，数据库进程回滚该交易ID，用户余额恢复(rollback)到取款前的数目。 ATM如果成功吐钞，会发送确认消息告诉后台数据库进程，至此整个交易ID完成。 但故障有很多，包括ATM机械故障、ATM余额不足、ATM掉电重启、网络故障等等。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-29T09:44:02.943Z">
+<meta property="og:updated_time" content="2018-07-02T03:25:44.864Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jorrell Bolg">
-<meta name="twitter:description" content="#ATM是先扣余额再吐钞！ 用户肯定会担心，万一吐钞过程中发生了机器故障，钞票没有吐出，但账户余额却被扣除的状况发生。 ATM发生故障时，会发送失败消息给后台数据库进程，数据库进程回滚该交易ID，用户余额恢复(rollback)到取款前的数目。 ATM如果成功吐钞，会发送确认消息告诉后台数据库进程，至此整个交易ID完成。 但故障有很多，包括ATM机械故障、ATM余额不足、ATM掉电重启、网络故障等">
+<meta name="twitter:description" content="ATM是先扣余额再吐钞！用户肯定会担心，万一吐钞过程中发生了机器故障，钞票没有吐出，但账户余额却被扣除的状况发生。 ATM发生故障时，会发送失败消息给后台数据库进程，数据库进程回滚该交易ID，用户余额恢复(rollback)到取款前的数目。 ATM如果成功吐钞，会发送确认消息告诉后台数据库进程，至此整个交易ID完成。 但故障有很多，包括ATM机械故障、ATM余额不足、ATM掉电重启、网络故障等等。">
   
     <link rel="alternative" href="/atom.xml" title="Jorrell Bolg" type="application/atom+xml">
   
@@ -159,26 +159,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#ATM是先扣余额再吐钞！</p>
-<p>用户肯定会担心，万一吐钞过程中发生了机器故障，钞票没有吐出，但账户余额却被扣除的状况发生。</p>
+        <h1 id="ATM是先扣余额再吐钞！"><a href="#ATM是先扣余额再吐钞！" class="headerlink" title="ATM是先扣余额再吐钞！"></a>ATM是先扣余额再吐钞！</h1><p>用户肯定会担心，万一吐钞过程中发生了机器故障，钞票没有吐出，但账户余额却被扣除的状况发生。</p>
 <p>ATM发生故障时，会发送失败消息给后台数据库进程，数据库进程回滚该交易ID，用户余额恢复(rollback)到取款前的数目。</p>
 <p>ATM如果成功吐钞，会发送确认消息告诉后台数据库进程，至此整个交易ID完成。</p>
 <p>但故障有很多，包括ATM机械故障、ATM余额不足、ATM掉电重启、网络故障等等。接下来分析如何化解这一个个故障，确保交易的完整性。</p>
-<p>#ATM机械故障</p>
-<p>这里的机械故障，意味着在吐钱的过程中卡住了，ATM依靠自身是无法排除的，需要让后台数据库rollback，好在ATM依然能够通信，所以按照上文的回滚操作即可。</p>
-<p>#ATM余额不足</p>
-<p>这和上一种状况很类似，需要rollback操作，只要网络是畅通的，可以确保交易的完整性。</p>
-<p>#ATM掉电重启</p>
-<p>ATM还没有吐钞，此时ATM掉电，ATM本地会有文件应对这种掉电情况，ATM日志(log)文件里会实时记录这些详细信息，交易ID、账户信息、吐钞是否成功的关键词，当ATM重启完，会检查log文件，以查找出不完整的交易(没有吐钞)，然后通过消息告诉后台数据库做rollback操作。</p>
+<h1 id="ATM机械故障"><a href="#ATM机械故障" class="headerlink" title="ATM机械故障"></a>ATM机械故障</h1><p>这里的机械故障，意味着在吐钱的过程中卡住了，ATM依靠自身是无法排除的，需要让后台数据库rollback，好在ATM依然能够通信，所以按照上文的回滚操作即可。</p>
+<h1 id="ATM余额不足"><a href="#ATM余额不足" class="headerlink" title="ATM余额不足"></a>ATM余额不足</h1><p>这和上一种状况很类似，需要rollback操作，只要网络是畅通的，可以确保交易的完整性。</p>
+<h1 id="ATM掉电重启"><a href="#ATM掉电重启" class="headerlink" title="ATM掉电重启"></a>ATM掉电重启</h1><p>ATM还没有吐钞，此时ATM掉电，ATM本地会有文件应对这种掉电情况，ATM日志(log)文件里会实时记录这些详细信息，交易ID、账户信息、吐钞是否成功的关键词，当ATM重启完，会检查log文件，以查找出不完整的交易(没有吐钞)，然后通过消息告诉后台数据库做rollback操作。</p>
 <p>ATM吐完钞，还没有来得及给后台数据库发送确认消息，此时ATM掉电了。</p>
 <p>掉电了不可怕，只要本地日志文件完整记录交易ID及相关信息就好。有了这些关键信息，等ATM重启完成，会给后台数据库发送确认消息，一个交易彻底完成。</p>
-<p>#网络故障</p>
-<p>ATM吐钞成功，但是此时网络突然断了，ATM无法把确认消息发送个后台数据库。只要ATM本地日志文件完整记录整个交易ID的全过程，等网络恢复的时候，ATM会将还没有完整交易的确认消息发送给数据库，数据库完成最终的交易信息同步工作。</p>
+<h1 id="网络故障"><a href="#网络故障" class="headerlink" title="网络故障"></a>网络故障</h1><p>ATM吐钞成功，但是此时网络突然断了，ATM无法把确认消息发送个后台数据库。只要ATM本地日志文件完整记录整个交易ID的全过程，等网络恢复的时候，ATM会将还没有完整交易的确认消息发送给数据库，数据库完成最终的交易信息同步工作。</p>
 <p>如果发生极端情况，余额扣了ATM没有吐钞，ATM掉电重启，ATM本地的日志文件损坏无法恢复，此时还有救吗？</p>
 <p>不仅ATM客户端有交易日志，后台数据库也有交易日志，此时可以根据后台交易日志，追溯到该ATM机器，然后根据该ATM机器的取款总和、放入票箱的钱数的总和、以及票箱剩余额，可以推算出“该吐而没有吐”的取款数目，然后把钱给用户就好。</p>
 <p>要我说，查看用户ATM取款录像，用户拿没拿钱还不是一目了然？</p>
-<p>#结论</p>
-<p>先吐钞还是先扣余额不重要，重要的是有交易追溯机制！在交易的任何环节出现故障，都有确保交易的完整性的措施，使得交易或成功完成(银货两讫)、或恢复到交易前的状态(仿佛什么都没有发生)。</p>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>先吐钞还是先扣余额不重要，重要的是有交易追溯机制！在交易的任何环节出现故障，都有确保交易的完整性的措施，使得交易或成功完成(银货两讫)、或恢复到交易前的状态(仿佛什么都没有发生)。</p>
 <p>银行的后台数据库，Oracle数据库由三个文件构成：(1) data (2)control (3)log，这三个文件的协同工作使得后台数据库对每一个交易都可追溯。做每一个交易前期、中期、后期，都在log文件详细记录交易的每一个步骤，即使数据库服务器掉电重启，只要control、log文件是完整无缺的，就可以构建出一个完整的database，即使data文件由于服务器掉电是不完整的。</p>
 <p>作者：车小胖<br>链接：<a href="https://www.zhihu.com/question/281092034/answer/427027431" target="_blank" rel="noopener">https://www.zhihu.com/question/281092034/answer/427027431</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
 
